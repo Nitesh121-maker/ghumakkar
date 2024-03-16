@@ -28,6 +28,13 @@ export default function Header() {
                 <select 
                     style={{ width: "80px" }}
                     className="text-white hover:text-gray-300 bg-transparent border-none"
+                    defaultValue=""
+                    onChange={(e) => {
+                        const selected = e.target.value;
+                        if (selected) {
+                          window.location.href = selected;
+                        }
+                      }}
                  >
                     <option value="" disabled selected>
                     Explore

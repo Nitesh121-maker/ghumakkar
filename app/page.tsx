@@ -254,36 +254,41 @@ export default function Home() {
         {/*Community and User Accounts*/}
         <section className="bg-gray-200 py-16">
             <div className="container mx-auto text-center">
-                <h2 className="text-3xl font-bold mb-4">Community and User Accounts</h2>
+                <h2 className="text-3xl font-bold mb-8 text-gray-800">Community and User Accounts</h2>
+                
                 {/* User Registration */}
-                <div className="mb-8">
-                    <h3 className="text-xl text-gray-800 font-semibold mb-2">User Registration</h3>
-                    <p className="text-gray-700">Sign up to access exclusive features and benefits.</p>
-                    <a href='/login' className="bg-blue-500 text-white px-6 py-3 rounded-md mt-4">Sign Up</a>
+                <div className="mb-16">
+                    <h3 className="text-xl font-semibold mb-4 text-gray-800">User Registration</h3>
+                    <p className="text-gray-700 mb-6">Sign up to access exclusive features and benefits.</p>
+                    <a href="/login" className="inline-block bg-blue-500 text-white px-8 py-3 rounded-full shadow-md hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105">Sign Up</a>
                 </div>
+                
                 {/* User Dashboards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Tourist Dashboard */}
-                    <div className="bg-white p-6 rounded-md shadow-md">
-                        <h3 className="text-xl text-gray-800 font-bold mb-2">Tourist Dashboard</h3>
-                        <p className="text-gray-600">Manage bookings, view past trips, and leave reviews for homestays and artisans.</p>
-                        <button className="bg-blue-500 text-white px-4 py-2 rounded-md mt-4">View Dashboard</button>
+                    <div className="bg-white p-8 rounded-md shadow-md">
+                        <h3 className="text-xl font-bold mb-4 text-gray-800">Tourist Dashboard</h3>
+                        <p className="text-gray-600 mb-6">Manage bookings, view past trips, and leave reviews for homestays and artisans.</p>
+                        <button className="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105">View Dashboard</button>
                     </div>
+                    
                     {/* Homestay Owner Dashboard */}
-                    <div className="bg-white p-6 rounded-md shadow-md">
-                        <h3 className="text-xl text-gray-800 font-bold mb-2">Homestay Owner Dashboard</h3>
-                        <p className="text-gray-600">Manage listings, update availability, receive booking requests, communicate with guests, and track bookings.</p>
-                        <button className="bg-blue-500 text-white px-4 py-2 rounded-md mt-4">View Dashboard</button>
+                    <div className="bg-white p-8 rounded-md shadow-md">
+                        <h3 className="text-xl font-bold mb-4 text-gray-800">Homestay Owner Dashboard</h3>
+                        <p className="text-gray-600 mb-6">Manage listings, update availability, receive booking requests, communicate with guests, and track bookings.</p>
+                        <button className="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105">View Dashboard</button>
                     </div>
+                    
                     {/* Artisan Dashboard */}
-                    <div className="bg-white p-6 rounded-md shadow-md">
-                        <h3 className="text-xl text-gray-800 font-bold mb-2">Artisan Dashboard</h3>
-                        <p className="text-gray-600">Manage profile, product listings, orders, communication with potential buyers, and access sales analytics.</p>
-                        <button className="bg-blue-500 text-white px-4 py-2 rounded-md mt-4">View Dashboard</button>
+                    <div className="bg-white p-8 rounded-md shadow-md">
+                        <h3 className="text-xl font-bold mb-4 text-gray-800">Artisan Dashboard</h3>
+                        <p className="text-gray-600 mb-6">Manage profile, product listings, orders, communication with potential buyers, and access sales analytics.</p>
+                        <button className="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105">View Dashboard</button>
                     </div>
                 </div>
             </div>
         </section>
+
   
        {/* Testimonials */}
        <section className="py-16 bg-white">
