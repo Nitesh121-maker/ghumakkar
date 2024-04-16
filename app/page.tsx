@@ -76,6 +76,23 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header/>
+            
+            {/* Search Bar */}
+            <section className="py-16 bg-white">
+              <div className="container mx-auto text-center">
+              <h2 className="text-3xl font-bold text-gray-800 mb-4">Find Your Next Adventure</h2>
+                  <div className="max-w-lg mx-auto">                
+                      <input
+                          type="text"
+                          placeholder="Search destinations, artisan crafts, or experiences"
+                          className="px-4 py-3 border border-gray-300 rounded-md w-full text-gray-600 focus:outline-none focus:border-blue-400 transition-colors duration-300"
+                      />
+                      <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-md transition-colors duration-300 focus:outline-none focus:bg-blue-600">
+                          Search
+                      </button>
+                  </div>
+              </div>
+          </section>
             {/* Hero Section */}
             <section className="bg-gradient-to-br from-blue-400 to-purple-600 text-white py-20">
                   <div className="container mx-auto text-center">
@@ -105,22 +122,6 @@ export default function Home() {
                   </div>
               </section>
 
-            {/* Search Bar */}
-            <section className="py-16 bg-white">
-              <div className="container mx-auto text-center">
-                  <div className="max-w-lg mx-auto">
-                      <h2 className="text-3xl font-bold text-gray-800 mb-4">Find Your Next Adventure</h2>
-                      <input
-                          type="text"
-                          placeholder="Search destinations, artisan crafts, or experiences"
-                          className="px-4 py-3 border border-gray-300 rounded-md w-full text-gray-600 focus:outline-none focus:border-blue-400 transition-colors duration-300"
-                      />
-                      <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-md transition-colors duration-300 focus:outline-none focus:bg-blue-600">
-                          Search
-                      </button>
-                  </div>
-              </div>
-          </section>
             {/* About Us */}
             <section className="bg-gray-100 py-16">
               <div className="container mx-auto text-center">
@@ -179,10 +180,10 @@ export default function Home() {
                   <h2 className="text-3xl font-bold  mb-4">Explore Destinations</h2>
                   {/* Filter Options */}
                   <div className="flex justify-center mb-8 space-x-4">
-                      {/* <button className="px-4 py-2 bg-blue-500 text-white rounded-md">Region</button>
+                      <button className="px-4 py-2 bg-blue-500 text-white rounded-md">Region</button>
                       <button className="px-4 py-2 bg-blue-500 text-white rounded-md">Type</button>
                       <button className="px-4 py-2 bg-blue-500 text-white rounded-md">Interests</button>
-                      <button className="px-4 py-2 bg-blue-500 text-white rounded-md">Travel Style</button> */}
+                      <button className="px-4 py-2 bg-blue-500 text-white rounded-md">Travel Style</button>
                   </div>
                   {/* Destination Listing */}
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -260,7 +261,7 @@ export default function Home() {
                 <div className="mb-16">
                     <h3 className="text-xl font-semibold mb-4 text-gray-800">User Registration</h3>
                     <p className="text-gray-700 mb-6">Sign up to access exclusive features and benefits.</p>
-                    <a href="/login" className="inline-block bg-blue-500 text-white px-8 py-3 rounded-full shadow-md hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105">Sign Up</a>
+                    <a href="/homestay-owner-registeration" className="inline-block bg-blue-500 text-white px-8 py-3 rounded-full shadow-md hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105">Sign Up</a>
                 </div>
                 
                 {/* User Dashboards */}
@@ -276,7 +277,7 @@ export default function Home() {
                     <div className="bg-white p-8 rounded-md shadow-md">
                         <h3 className="text-xl font-bold mb-4 text-gray-800">Homestay Owner Dashboard</h3>
                         <p className="text-gray-600 mb-6">Manage listings, update availability, receive booking requests, communicate with guests, and track bookings.</p>
-                        <button className="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105">View Dashboard</button>
+                        <a href="/homestay-owner-registeration" className="inline-block bg-blue-500 text-white px-8 py-3 rounded-full shadow-md hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105">Sign Up</a>
                     </div>
                     
                     {/* Artisan Dashboard */}
