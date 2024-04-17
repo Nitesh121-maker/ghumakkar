@@ -1,8 +1,10 @@
+'use client'
 // pages/index.js
 import Head from 'next/head';
 import Header from './header/page';
 import Footer from './footer'
-
+import { useState } from 'react';
+import './main.css'
 export default function Home() {
   const destinations = [
     {
@@ -67,7 +69,9 @@ export default function Home() {
     },
     // Add more artisans/crafts as needed
   ];
-  
+  const destination = ['New York', 'Paris', 'Tokyo', 'London', 'Sydney'];
+  const places = ['City A', 'City B', 'City C', 'City D', 'City E'];
+  const [searchType, setSearchType] = useState('flight');
     return (
         <div>
             <Head>
@@ -79,23 +83,100 @@ export default function Home() {
             
             {/* Search Bar */}
             <section className="py-16 bg-white">
-              <div className="container mx-auto text-center">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">Find Your Next Adventure</h2>
-                  <div className="max-w-lg mx-auto">                
-                      <input
-                          type="text"
-                          placeholder="Search destinations, artisan crafts, or experiences"
-                          className="px-4 py-3 border border-gray-300 rounded-md w-full text-gray-600 focus:outline-none focus:border-blue-400 transition-colors duration-300"
-                      />
-                      <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-md transition-colors duration-300 focus:outline-none focus:bg-blue-600">
-                          Search
-                      </button>
-                  </div>
-              </div>
-          </section>
+                <div className="containermain mx-auto text-center">
+                    <h2 className="text-3xl font-bold text-gray-800 mb-4">Find Your Next Adventure</h2>
+                    <div className="max-w-lg mx-auto">
+                    <div className="mt-4 flex justify-between">
+                        <button
+                        className={`px-4 py-2 rounded-md ${
+                            searchType === 'flight' ? 'bg-green-500 text-white' : 'text-blue-500 hover:bg-green-200'
+                        }`}
+                        onClick={() => setSearchType('flight')}
+                        >
+                        Flight
+                        </button>
+                        <button
+                        className={`px-4 py-2 rounded-md ${
+                            searchType === 'homestay' ? 'bg-green-500 text-white' : 'text-blue-500 hover:bg-green-200'
+                        }`}
+                        onClick={() => setSearchType('homestay')}
+                        >
+                        Homestay
+                        </button>
+                    </div>
+                    {searchType === 'flight' && (
+                        <form>
+                        <div className="grid grid-cols-1 gap-y-4">
+                            <input
+                            type="text"
+                            placeholder="From"
+                            className="px-4 py-3 border border-gray-300 rounded-md w-full text-gray-600 focus:outline-none focus:border-blue-400 transition-colors duration-300"
+                            list="places"
+                            />
+                            <datalist id="places">
+                            {places.map((place, index) => (
+                                <option key={index} value={place} />
+                            ))}
+                            </datalist>
+                            <input
+                            type="text"
+                            placeholder="To"
+                            className="px-4 py-3 border border-gray-300 rounded-md w-full text-gray-600 focus:outline-none focus:border-blue-400 transition-colors duration-300"
+                            list="destinations"
+                            />
+                            <datalist id="destinations">
+                            {destination.map((destination, index) => (
+                                <option key={index} value={destination} />
+                            ))}
+                            </datalist>
+                            <input
+                            type="date"
+                            placeholder="Departure Date"
+                            className="px-4 py-3 border border-gray-300 rounded-md w-full text-gray-600 focus:outline-none focus:border-blue-400 transition-colors duration-300"
+                            />
+                        </div>
+                        <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-md transition-colors duration-300 focus:outline-none focus:bg-blue-600">
+                            Search Flights
+                        </button>
+                        </form>
+                    )}
+
+                    {searchType === 'homestay' && (
+                        <form>
+                        <div className="grid grid-cols-1 gap-y-4">
+                            <input
+                            type="text"
+                            placeholder="Destination"
+                            className="px-4 py-3 border border-gray-300 rounded-md w-full text-gray-600 focus:outline-none focus:border-blue-400 transition-colors duration-300"
+                            list="destinations"
+                            />
+                            <datalist id="destinations">
+                            {destination.map((destination, index) => (
+                                <option key={index} value={destination} />
+                            ))}
+                            </datalist>
+                            <input
+                            type="date"
+                            placeholder="Check-in Date"
+                            className="px-4 py-3 border border-gray-300 rounded-md w-full text-gray-600 focus:outline-none focus:border-blue-400 transition-colors duration-300"
+                            />
+                            <input
+                            type="date"
+                            placeholder="Check-out Date"
+                            className="px-4 py-3 border border-gray-300 rounded-md w-full text-gray-600 focus:outline-none focus:border-blue-400 transition-colors duration-300"
+                            />
+                        </div>
+                        <button className="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-md transition-colors duration-300 focus:outline-none focus:bg-blue-600">
+                            Search Homestays
+                        </button>
+                        </form>
+                    )}
+                    </div>
+                </div>
+            </section>
             {/* Hero Section */}
             <section className="bg-gradient-to-br from-blue-400 to-purple-600 text-white py-20">
-                  <div className="container mx-auto text-center">
+                  <div className="containermain mx-auto text-center">
                       <h1 className="text-4xl font-bold mb-4">Welcome to Weaver's Way</h1>
                       <p className="text-lg mb-8">Discover India's diverse landscapes, artisans, and cultural experiences</p>
                       {/* Add eye-catching visuals */}
@@ -124,7 +205,7 @@ export default function Home() {
 
             {/* About Us */}
             <section className="bg-gray-100 py-16">
-              <div className="container mx-auto text-center">
+              <div className="containermain mx-auto text-center">
                   <h2 className="text-3xl text-blue-800 font-bold mb-4">About Weaver's Way</h2>
                   <p className="text-lg text-blue-700 mb-8">
                       Weaver's Way is on a mission to showcase India's diverse landscapes, artisans, and cultural experiences. 
@@ -144,7 +225,7 @@ export default function Home() {
           </section>
             {/* How it Works */}
             <section className="py-16 bg-white">
-              <div className="container mx-auto text-center">
+              <div className="containermain mx-auto text-center">
                   <h2 className="text-3xl font-bold text-gray-800 mb-4">How it Works</h2>
                   <p className="text-lg text-gray-700 mb-8">Discover how Weaver's Way benefits tourists, homestay owners, and artisans.</p>
                   <div className="flex flex-col md:flex-row items-center justify-center gap-8">
@@ -176,7 +257,7 @@ export default function Home() {
 
             {/* Featured Destinations */}
             <section className="bg-gray-300 py-16">
-                  <div className="container mx-autotainer mx-auto text-center">
+                  <div className="containermain mx-autotainer mx-auto text-center">
                   <h2 className="text-3xl font-bold  mb-4">Explore Destinations</h2>
                   {/* Filter Options */}
                   <div className="flex justify-center mb-8 space-x-4">
@@ -202,7 +283,7 @@ export default function Home() {
           </section>
             {/* HomeStays */}
             <section className="bg-gray-300 py-16">
-            <div className="container mx-auto text-center">
+            <div className="containermain mx-auto text-center">
                 <h2 className="text-3xl font-bold mb-4">Homestays</h2>
                 {/* Homestay Listings */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -235,7 +316,7 @@ export default function Home() {
         </section>
         {/* Artisans and Crafts */}
         <section className="bg-gray-100 py-16">
-            <div className="container mx-auto text-center">
+            <div className="containermain mx-auto text-center">
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">Artisans and Crafts</h2>
                 {/* Artisans Listing */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -254,7 +335,7 @@ export default function Home() {
         </section>
         {/*Community and User Accounts*/}
         <section className="bg-gray-200 py-16">
-            <div className="container mx-auto text-center">
+            <div className="containermain mx-auto text-center">
                 <h2 className="text-3xl font-bold mb-8 text-gray-800">Community and User Accounts</h2>
                 
                 {/* User Registration */}
@@ -293,7 +374,7 @@ export default function Home() {
   
        {/* Testimonials */}
        <section className="py-16 bg-white">
-            <div className="container mx-auto text-center">
+            <div className="containermain mx-auto text-center">
                 <h2 className="text-3xl font-bold mb-4">Testimonials</h2>
                 {/* Testimonial Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
