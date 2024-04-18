@@ -86,7 +86,7 @@ export default function Home() {
                 <div className="containermain mx-auto text-center">
                     <h2 className="text-3xl font-bold text-gray-800 mb-4">Find Your Next Adventure</h2>
                     <div className="max-w-lg mx-auto">
-                    <div className="mt-4 flex justify-between">
+                    <div className="mt-4 mb-4 flex justify-between">
                         <button
                         className={`px-4 py-2 rounded-md ${
                             searchType === 'flight' ? 'bg-green-500 text-white' : 'text-blue-500 hover:bg-green-200'

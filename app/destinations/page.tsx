@@ -220,7 +220,7 @@ const DestinationsPage = () => {
     <>
     <Header/>
     <div className="bg-gray-100 min-h-screen py-12">
-      <div className="container mx-auto">
+      <div className="containermain mx-auto">
         <h1 className="text-3xl text-gray-800 font-bold mb-8 text-center">Explore Destinations</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {destinations.map((destination, index) => (
