@@ -7,7 +7,7 @@ const RegistrationPage = () => {
   const [homestayName, setHomestayName] = useState('');
   const [location, setLocation] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     // Handle form submission, e.g., send data to backend
   };
