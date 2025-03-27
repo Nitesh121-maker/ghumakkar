@@ -75,8 +75,8 @@ export default function Home() {
     return (
         <div>
             <Head>
-                <title>Weaver's Way</title>
-                <meta name="description" content="Explore India's diverse landscapes, artisans, and cultural experiences with Weaver's Way." />
+                <title>Weavers Way</title>
+                <meta name="description" content="Explore Indias diverse landscapes, artisans, and cultural experiences with Weavers Way." />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header/>
@@ -177,8 +177,8 @@ export default function Home() {
             {/* Hero Section */}
             <section className="bg-gradient-to-br from-blue-400 to-purple-600 text-white py-20">
                   <div className="containermain mx-auto text-center">
-                      <h1 className="text-4xl font-bold mb-4">Welcome to Weaver's Way</h1>
-                      <p className="text-lg mb-8">Discover India's diverse landscapes, artisans, and cultural experiences</p>
+                      <h1 className="text-4xl font-bold mb-4">Welcome to Weavers Way</h1>
+                      <p className="text-lg mb-8">Discover Indias diverse landscapes, artisans, and cultural experiences</p>
                       {/* Add eye-catching visuals */}
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                           {/* Visual 1 */}
@@ -206,20 +206,20 @@ export default function Home() {
             {/* About Us */}
             <section className="bg-gray-100 py-16">
               <div className="containermain mx-auto text-center">
-                  <h2 className="text-3xl text-blue-800 font-bold mb-4">About Weaver's Way</h2>
+                  <h2 className="text-3xl text-blue-800 font-bold mb-4">About Weavers Way</h2>
                   <p className="text-lg text-blue-700 mb-8">
-                      Weaver's Way is on a mission to showcase India's diverse landscapes, artisans, and cultural experiences. 
+                      Weavers Way is on a mission to showcase Indias diverse landscapes, artisans, and cultural experiences. 
                       Our values revolve around promoting sustainable tourism, empowering local communities, and preserving traditional crafts. 
                       We believe in creating meaningful connections between travelers, homestay owners, and artisans, fostering authentic experiences 
                       that leave a positive impact on both visitors and locals alike.
                   </p>
                   <p className="text-lg text-blue-700 mb-8">
-                      Through Weaver's Way, tourists have the opportunity to explore hidden gems, discover unique homestays, and connect 
+                      Through Weavers Way, tourists have the opportunity to explore hidden gems, discover unique homestays, and connect 
                       with talented artisans across India. We are committed to providing travelers with enriching experiences while supporting 
-                      local livelihoods and preserving India's rich cultural heritage.
+                      local livelihoods and preserving Indias rich cultural heritage.
                   </p>
                   <p className="text-lg text-blue-700 mb-8">
-                      Join us on our journey to celebrate India's beauty, creativity, and hospitality. Let's weave unforgettable memories together!
+                      Join us on our journey to celebrate Indias beauty, creativity, and hospitality. Lets weave unforgettable memories together!
                   </p>
               </div>
           </section>
@@ -227,7 +227,7 @@ export default function Home() {
             <section className="py-16 bg-white">
               <div className="containermain mx-auto text-center">
                   <h2 className="text-3xl font-bold text-gray-800 mb-4">How it Works</h2>
-                  <p className="text-lg text-gray-700 mb-8">Discover how Weaver's Way benefits tourists, homestay owners, and artisans.</p>
+                  <p className="text-lg text-gray-700 mb-8">Discover how Weavers Way benefits tourists, homestay owners, and artisans.</p>
                   <div className="flex flex-col md:flex-row items-center justify-center gap-8">
                       {/* Tourists Section */}
                       <div className="flex-1 max-w-md">
@@ -380,17 +380,17 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {/* Testimonial Card 1 */}
                     <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-                        <p className="text-lg text-gray-800 mb-4">"Weaver's Way provided us with an unforgettable experience. The homestay was cozy, the hosts were welcoming, and the artisan workshop visit was enlightening. Highly recommended!"</p>
+                        <p className="text-lg text-gray-800 mb-4">Weavers Way provided us with an unforgettable experience. The homestay was cozy, the hosts were welcoming, and the artisan workshop visit was enlightening. Highly recommended!</p>
                         <p className="text-sm text-gray-600">- John Doe, USA</p>
                     </div>
                     {/* Testimonial Card 2 */}
                     <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-                        <p className="text-lg text-gray-800 mb-4">"I had the pleasure of staying at a Weaver's Way homestay during my trip to India. It was a unique and authentic experience that allowed me to immerse myself in the local culture. I can't wait to visit again!"</p>
+                        <p className="text-lg text-gray-800 mb-4">I had the pleasure of staying at a Weavers Way homestay during my trip to India. It was a unique and authentic experience that allowed me to immerse myself in the local culture. I can not wait to visit again!</p>
                         <p className="text-sm text-gray-600">- Jane Smith, UK</p>
                     </div>
                     {/* Testimonial Card 3 */}
                     <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-                        <p className="text-lg text-gray-800 mb-4">"As an artisan partnered with Weaver's Way, I've had the opportunity to showcase my craft to a global audience. The platform has helped me connect with art enthusiasts and expand my business." </p>
+                        <p className="text-lg text-gray-800 mb-4">As an artisan partnered with Weavers Way, I have had the opportunity to showcase my craft to a global audience. The platform has helped me connect with art enthusiasts and expand my business. </p>
                         <p className="text-sm text-gray-600">- Artisan Name, India</p>
                     </div>
                 </div>

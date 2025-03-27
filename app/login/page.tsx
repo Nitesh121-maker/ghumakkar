@@ -14,7 +14,7 @@ const Login = () => {
                 <div className=" inset-0 bg-cover bg-center z-0" style={{ backgroundImage: "url('https://source.unsplash.com/1200x800/?travel')" }}>
                     <div className="inset-0 bg-opacity-75 "></div>
                     <div className="z-10 text-white text-center">
-                        <h1 className="text-4xl font-bold mb-4">Weaver's Way: Connecting hearts, hands, and cultures.</h1>
+                        <h1 className="text-4xl font-bold mb-4">Weavers Way: Connecting hearts, hands, and cultures.</h1>
                         <p className="text-lg">Welcome to the journey.</p>
                     </div>
                 </div>
