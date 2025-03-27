@@ -1,12 +1,5 @@
-<<<<<<< HEAD
 body{
     margin: 0;
     padding: 0;
     overflow: hidden;
-=======
-body{
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
->>>>>>> 3255247 (NS_COMMIT 00:04 27-03-25 Error: ' can be escaped with &apos)
 }
